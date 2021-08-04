@@ -1,24 +1,17 @@
 const form = document.querySelector(".form");
+const password = document.querySelector("#password").value;
+const email = document.querySelector("#email").value;
+const passwordValidation = document.querySelector(".password-validation");
+const emailValidation = document.querySelector(".email-validation");
 
 const formValidation = (event) => {
   event.preventDefault();
-
-  const password = document.querySelector("#password").value;
-  const email = document.querySelector("#email").value;
-  const passwordValidation = document.querySelector(".password-validation");
-  const emailValidation = document.querySelector(".email-validation");
-
-  if (validateEmail(email)) {
-    emailValidation.classList.remove("block");
-  } else {
-    emailValidation.classList.add("block");
-  }
-
-  if (password.length < 6) {
-    passwordValidation.classList.add("block");
-  } else {
-    passwordValidation.classList.remove("block");
-  }
+  validateEmail(email)
+    ? emailValidation.classList.remove("block")
+    : emailValidation.classList.add("block");
+  password.length < 6
+    ? passwordValidation.classList.add("block")
+    : passwordValidation.classList.remove("block");
 };
 
 const validateEmail = (email) => {
