@@ -2,6 +2,10 @@
 
 :root {
   --font: "Lato", sans-serif;
+  --blue: #bfdbfe;
+  --black: #111111;
+  --white: #ffffff;
+  --red: #ef4444;
 }
 
 * {
@@ -9,6 +13,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font);
+  letter-spacing: 0.13rem;
 }
 
 body {
@@ -17,21 +22,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(
-    to right top,
-    #845ec2,
-    #d65db1,
-    #ff6f91,
-    #ff9671,
-    #ffc75f,
-    #f9f871
-  );
+  background-color: var(--blue);
 }
 
 .container {
   padding: 3rem;
   width: 400px;
-  background-color: #ffffff;
+  background-color: var(--white);
   box-shadow: 1px 8px 18px rgba(0, 0, 0, 0.24);
 }
 
@@ -53,7 +50,7 @@ label {
 #email,
 #password {
   width: 100%;
-  border: 0.01rem solid #111111;
+  border: 0.01rem solid var(--black);
   margin-bottom: 1rem;
   padding: 0.5rem 0.3rem;
   font-size: 1rem;
@@ -61,15 +58,14 @@ label {
 
 .email-validation,
 .password-validation {
-  color: #ef4444;
+  color: var(--red);
   padding-bottom: 1rem;
-  font-weight: 700;
   display: none;
 }
 .submit-btn {
-  background-color: #111111;
+  background-color: var(--black);
   padding: 0.7rem 0;
-  color: #ffffff;
+  color: var(--white);
   border: 0;
   cursor: pointer;
 }
